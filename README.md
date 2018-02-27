@@ -27,3 +27,12 @@ The source code is currently split into different R source files, corresponding 
 
 The EPS method used to extract the other ranking of genes is run in parallel of step 3.
 The source code for the EPS method is available at: https://github.com/roohy/Extreme-Pseudo-Sampler/
+
+Please note that
+- Some variables may have to be modified in the R scripts (eg. *baseDir*) according to your system configuration
+- These R scripts rely heavily on external libraries which might be subject to change (especially TCGAbiolinks). 
+If that were the case, some errors might occur.
+
+### Citation
+
+...

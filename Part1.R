@@ -3,10 +3,8 @@ library(dplyr)
 library(DT)
 library("DESeq2")
 library(stringr)
-library(randomForest)
 library(ROCR)
 library(caret)
-library(survival)
 
 baseDir<-"/Users/steph/github/ML_RNA-Seq"
 
