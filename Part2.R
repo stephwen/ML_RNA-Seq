@@ -51,9 +51,13 @@ for (dataset in datasets) {
 	resOrdered <- res[order(res$padj),]
 	resSig <- subset(resOrdered, padj < 0.05)
 	write.csv(as.data.frame(resOrdered), file=paste0(DataDirectory, "/DESeq2-results.csv"))
+	DESeq2ResultsOrdered<-as.data.frame(resOrdered)
+	DESeq2ResultsSig<-DESeq2ResultsOrdered[!is.na(DESeq2ResultsOrdered$padj),]	# NA as adjusted p-val is bad
+	DESeq2ResultsSig<-DESeq2ResultsSig[DESeq2ResultsSig$padj<0.05,]
 
 	# save the learning set and the validation set for the following steps
 	save(LS, file = paste0(DataDirectory, "/LS.robject"))
 	save(VS, file = paste0(DataDirectory, "/VS.robject"))
+	save(DESeq2ResultsSig, file = paste0(DataDirectory, "/DESeq2ResultsSig.robject"))
 
 }
