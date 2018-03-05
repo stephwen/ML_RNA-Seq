@@ -33,7 +33,7 @@ for (dataset in datasets) {
 	RF_LS<-cbind(RF_LS, rangerCond)
 
 	# here we only extract the permutation importance, but it's very straightforward to extract the impurity importance too, see commented lines below
-	rf.ranger <- ranger(dependent.variable.name="rangerCond", data = RF_LS, num.trees = 10001, mtry = 236, write.forest = FALSE, probability = FALSE, importance="permutation")
+	rf.ranger <- ranger(dependent.variable.name="rangerCond", data = RF_LS, num.trees = 100000, mtry = 236, write.forest = FALSE, probability = FALSE, importance="permutation")
 	permutationRanking<-rf.ranger$variable.importance[order(rf.ranger$variable.importance, decreasing=T)]
 
 	# rf.ranger <- ranger(dependent.variable.name="rangerCond", data = RF_LS, num.trees = 10001, mtry = 236, write.forest = FALSE, probability = FALSE, importance="impurity")
