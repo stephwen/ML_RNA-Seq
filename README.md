@@ -35,5 +35,7 @@ If that were the case, some errors might occur.
 ### Citation
 
 Using supervised learning methods for gene selection in RNA-Seq case-control studies
+
 Stephane Wenric, Ruhollah Shemirani
+
 bioRxiv 282780; doi: https://doi.org/10.1101/282780 
