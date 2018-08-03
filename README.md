@@ -34,4 +34,4 @@ If that were the case, some errors might occur.
 
 ### Citation
 
-**Wenric S and Shemirani R (2018) Using Supervised Learning Methods for Gene Selection in RNA-Seq Case-Control Studies.** *Front. Genet. 9:297.* doi: [10.3389/fgene.2018.00297](https://doi.org/10.3389/fgene.2018)
+**Wenric S and Shemirani R (2018) Using Supervised Learning Methods for Gene Selection in RNA-Seq Case-Control Studies.** *Front. Genet. 9:297.* doi: [10.3389/fgene.2018.00297](https://doi.org/10.3389/fgene.2018.00297)
