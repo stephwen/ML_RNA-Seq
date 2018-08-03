@@ -58,7 +58,7 @@ for (dataset in datasets) {
   dataPrep <- TCGAanalyze_Preprocessing(object = dataPrep, datatype = "HTSeq - Counts")  
 
   samplesList<-list()
-  cond<-NULL
+  # cond<-NULL
 
   for (i in (1:dim(dataPrep)[2])) {
     sampleName<-substr(colnames(dataPrep)[i], 0, 15)
@@ -67,12 +67,13 @@ for (dataset in datasets) {
       write.table(vector, sep="\t", file=paste0(DataDirectory, "/",i,"_",sampleName,"_","HTSeq_Counts",".csv"), col.names = FALSE, quote=F)
       # we output the HTSeq-count data to individual files which will be easily loaded at the DESeq2 step
       samplesList[[sampleName]]=i
-      if (colnames(dataPrep)[i] %in% dataSmNT) {
-        cond<-c(cond, "normal")
-      } else { cond<-c(cond, "cancer") }
+      # if (colnames(dataPrep)[i] %in% dataSmNT) {
+      #   cond<-c(cond, "normal")
+      # } else { cond<-c(cond, "cancer") }
     }
   }
 
+  cond<-cbind(rep("cancer", length(dataSmTP)), rep("normal", length(dataSmNT)))
   write.csv(cond, file=paste0(DataDirectory, "/cond.csv"))
   save(cond, file = paste0(DataDirectory, "/cond.robject"))
 

@@ -1,10 +1,10 @@
 # Using supervised learning methods for gene selection in RNA-Seq case-control studies
 
-This git repository contains the additional files used in the following research article: https://www.biorxiv.org/content/early/2018/03/15/282780.1
+This git repository contains the additional files used in the following research article: https://www.frontiersin.org/articles/10.3389/fgene.2018.00297/full
 
 ### Pre-requisites
 
-* TCGAbiolinks
+* [TCGAbiolinks](https://github.com/BioinformaticsFMRP/TCGAbiolinks)
 * dplyr
 * DT
 * DESeq2
@@ -29,9 +29,9 @@ The source code for the EPS method is available at: https://github.com/roohy/Ext
 
 Please note that
 - Some variables may have to be modified in the R scripts (eg. *baseDir*) according to your system configuration.
-- These R scripts rely heavily on external libraries which might be subject to change (especially *TCGAbiolinks*). 
+- These R scripts rely heavily on external libraries which might be subject to change (especially *[TCGAbiolinks](https://github.com/BioinformaticsFMRP/TCGAbiolinks)*). 
 If that were the case, some errors might occur.
 
 ### Citation
 
-**Using supervised learning methods for gene selection in RNA-Seq case-control studies.** Stephane Wenric, Ruhollah Shemirani. *bioRxiv 282780;* doi: https://doi.org/10.1101/282780 
+**Wenric S and Shemirani R (2018) Using Supervised Learning Methods for Gene Selection in RNA-Seq Case-Control Studies.** *Front. Genet. 9:297.* doi: [10.3389/fgene.2018.00297](https://doi.org/10.3389/fgene.2018)
