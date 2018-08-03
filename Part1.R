@@ -73,7 +73,7 @@ for (dataset in datasets) {
     }
   }
 
-  cond<-cbind(rep("cancer", length(dataSmTP)), rep("normal", length(dataSmNT)))
+  cond<-c(rep("cancer", length(dataSmTP)), rep("normal", length(dataSmNT)))
   write.csv(cond, file=paste0(DataDirectory, "/cond.csv"))
   save(cond, file = paste0(DataDirectory, "/cond.robject"))
 
